@@ -3,7 +3,9 @@ import Directory from "./pages/Directory";
 
 function App() {
   return (
-    <Directory />
+    <div>
+      <Directory />
+    </div>
   );
 }
 
