@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import API from "../utils/API";
+import Container from "../components/Container";
+import Jumbotron from "../components/Jumbotron";
 
 class Directory extends Component {
     state = {
@@ -23,7 +25,11 @@ class Directory extends Component {
     }
 
     render() {
-        return "";
+        return (
+            <div>
+                <Jumbotron />
+            </div>     
+        );
     }
 }
 
