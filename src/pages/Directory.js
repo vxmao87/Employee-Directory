@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import API from "../utils/API";
 import Container from "../components/Container";
 import Jumbotron from "../components/Jumbotron";
-import Form from "../components/Form";
+import SearchForm from "../components/SearchForm";
 
 class Directory extends Component {
     state = {
@@ -29,6 +29,7 @@ class Directory extends Component {
         return (
             <div>
                 <Jumbotron />
+                <SearchForm />
             </div>     
         );
     }
