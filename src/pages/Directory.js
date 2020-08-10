@@ -4,50 +4,48 @@ import Container from "../components/Container";
 import Jumbotron from "../components/Jumbotron";
 import SearchForm from "../components/SearchForm";
 import Row from "../components/Row";
-import EmployeeCard from "../components/EmployeeCard";
+import EmployeeTable from "../components/EmployeeTable";
 
 class Directory extends Component {
     state = {
         searchTerm: "",
         employees: {},
-        searchResult: {}
+        searchResults: {}
     };
 
-    componentDidMount() {
+    componentDidMount = () => {
         API.getEmployees().then(res => {
             console.log(res.data);
             this.setState({
                 employees: res.data.results,
-                searchResult: res.data.results
+                searchResults: res.data.results
             });
         }).catch(err => console.log(err));
-    }
+    };
 
     handleBtnClick = event => {
 
-    }
+    };
 
     handleInputChange = event => {
 
-    }
+    };
 
     sortEmployeesByName = () => {
         
-    }
+    };
 
     render() {
         return (
             <Container>
                 <Jumbotron />
-                <Row>
-                    <SearchForm
-                        handleInputChange={this.handleInputChange}
-                        value={this.searchTerm}
-                    />
-                </Row>
-                <Row>
-                    <EmployeeCard />
-                </Row>
+                <SearchForm
+                    handleInputChange={this.handleInputChange}
+                    value={this.searchTerm}
+                />
+                <EmployeeTable
+                    results={this.state.searchResults}
+                />
             </Container>     
         );
     }
