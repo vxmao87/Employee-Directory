@@ -15,7 +15,7 @@ class Directory extends Component {
 
     componentDidMount = () => {
         API.getEmployees().then(res => {
-            console.log(res.data);
+            console.log(res.data.results);
             this.setState({
                 employees: res.data.results,
                 searchResults: res.data.results
