@@ -10,7 +10,8 @@ class Directory extends Component {
     state = {
         searchTerm: "",
         employees: {},
-        searchResults: {}
+        searchResults: {},
+        isSorted: false
     };
 
     componentDidMount = () => {
@@ -23,13 +24,21 @@ class Directory extends Component {
         }).catch(err => console.log(err));
     };
 
-    handleLinkClick = async event => {
+    handleLinkClick = event => {
         event.preventDefault();
+
+        if(this.state.isSorted) {
+            return this.setState({
+                searchResults: this.state.searchResults.reverse(),
+                isSorted: false
+            })
+        }
         let sortedResults = this.state.employees.sort((a, b) => {
             return a.name.first > b.name.first ? 1 : -1
         });
-        await this.setState({
-            searchResults: sortedResults
+        this.setState({
+            searchResults: sortedResults,
+            isSorted: true
         })
 
     };

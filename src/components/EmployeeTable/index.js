@@ -9,7 +9,7 @@ function EmployeeTable(props) {
             <div 
                 className="row d-flex justify-content-center">
                 <div className="col-12">
-                    <table className="table table-responsive-lg">
+                    <table className="table table-responsive-lg table-striped table-bordered table-hover">
                         <thead>
                             <TableHeader 
                                 handleLinkClick={props.handleLinkClick}/>

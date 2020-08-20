@@ -4,12 +4,9 @@ function TableHeader(props) {
     return (
         <tr>
             <th scope="col">Image</th>
-            <th scope="col">
-                Name
-                <button 
-                    onClick={props.handleLinkClick}>
-                    <i class="fas fa-sort"></i>
-                </button>
+            <th scope="col" onClick={props.handleLinkClick}>
+                Name (click to sort)
+                <i class="fas fa-sort"></i>
             </th>
             <th scope="col">Phone</th>
             <th scope="col">Email</th>
