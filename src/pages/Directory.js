@@ -23,7 +23,14 @@ class Directory extends Component {
         }).catch(err => console.log(err));
     };
 
-    handleBtnClick = event => {
+    handleLinkClick = async event => {
+        event.preventDefault();
+        let sortedResults = this.state.employees.sort((a, b) => {
+            return a.name.first > b.name.first ? 1 : -1
+        });
+        await this.setState({
+            searchResults: sortedResults
+        })
 
     };
 
@@ -39,10 +46,6 @@ class Directory extends Component {
         });
     };
 
-    sortEmployeesByName = () => {
-        
-    };
-
     render() {
         return (
             <Container>
@@ -53,6 +56,7 @@ class Directory extends Component {
                 />
                 <EmployeeTable
                     results={this.state.searchResults}
+                    handleLinkClick={this.handleLinkClick}
                 />
             </Container>     
         );

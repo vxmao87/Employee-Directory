@@ -1,11 +1,9 @@
 import React from "react";
-import Row from "../Row";
 import TableHeader from "../TableHeader";
 import EmployeeData from "../EmployeeData";
 
 function EmployeeTable(props) {
     const results = props.results;
-    console.log(results);
     return (
         <div className="container-fluid">
             <div 
@@ -13,7 +11,8 @@ function EmployeeTable(props) {
                 <div className="col-12">
                     <table className="table table-responsive-lg">
                         <thead>
-                            <TableHeader />
+                            <TableHeader 
+                                handleLinkClick={props.handleLinkClick}/>
                         </thead>
                         <tbody>
                             {results.length ? (
