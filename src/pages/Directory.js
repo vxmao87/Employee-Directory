@@ -27,8 +27,16 @@ class Directory extends Component {
 
     };
 
-    handleInputChange = event => {
-
+    handleInputChange = async event => {
+        event.preventDefault();
+        let searchInput = event.target.value.toLowerCase();
+        await this.setState({
+            searchTerm: searchInput,
+            searchResults: this.state.employees.filter(employee =>
+                employee.name.first.toLowerCase().includes(searchInput) ||
+                employee.name.last.toLowerCase().includes(searchInput)
+            )
+        });
     };
 
     sortEmployeesByName = () => {
