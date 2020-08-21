@@ -14,7 +14,7 @@
 
 ## Link
 
-Access the application [here](https://still-savannah-20478.herokuapp.com/).
+Access the application [here](https://vxmao87.github.io/Employee-Directory/).
 
 ## Description
 
