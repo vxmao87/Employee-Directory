@@ -1,16 +1,16 @@
 import React from "react";
+import "./style.css";
 
 function TableHeader(props) {
     return (
         <tr>
-            <th scope="col">Image</th>
-            <th scope="col" onClick={props.handleLinkClick}>
+            <th scope="col" className="employeePic">Image</th>
+            <th scope="col" className="employeeName" onClick={props.handleLinkClick}>
                 Name (click to sort)
-                <i class="fas fa-sort"></i>
             </th>
-            <th scope="col">Phone</th>
-            <th scope="col">Email</th>
-            <th scope="col">DOB</th>
+            <th scope="col" className="employeePhone">Phone</th>
+            <th scope="col" className="employeeEmail">Email</th>
+            <th scope="col" className="employeeDOB">DOB</th>
         </tr>
     );
 }

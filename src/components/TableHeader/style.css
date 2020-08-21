@@ -1,0 +1,33 @@
+.employeePic,
+.employeeName,
+.employeePhone,
+.employeeEmail,
+.employeeDOB {
+    color: white;
+    background-color: #1f1e33;
+}
+
+.employeePic:hover {
+    color: cyan;
+    background-color: purple;
+}
+
+.employeeName:hover {
+    color: #1f1e33;
+    background-color: yellow;
+}
+
+.employeePhone:hover {
+    color: orange;
+    background-color: green;
+}
+
+.employeeEmail:hover {
+    color: whitesmoke;
+    background-color: blue;
+}
+
+.employeeDOB:hover {
+    color: #1f1e33;
+    background-color: orange;
+}

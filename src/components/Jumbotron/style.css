@@ -3,3 +3,8 @@
     color: #1f1e33;
     text-align: center;
 }
+
+.jumbotron:hover {
+    background-color: #1f1e33;
+    color: cadetblue;
+}
